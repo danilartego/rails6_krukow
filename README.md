@@ -1,2 +1,1 @@
-# Уроки по Ruby on Rails
-ver 6.1.7
+# Уроки по Ruby on Rails 6
