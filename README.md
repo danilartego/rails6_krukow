@@ -49,11 +49,15 @@ flag, or set it as the default in your ~/.gemrc file. See
 Отключение автотестов при создании приложения Rails  
 `rails new -T NAME_FOLDER`
 
-### Проблемы с Webpacker
+### Проблемы с Webpacker (for git clone)
+```
+rake assets:precompile
+```
+Дополнения по Webpacker
 ```
 yarn remove @rails/webpacker
 rm -rf ./node_modules
 yarn add @rails/webpacker@^5.2.1
 rails webpacker:install
-rake assets:precompile
+
 ```
