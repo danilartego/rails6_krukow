@@ -1,11 +1,24 @@
-<h1> Questions </h1>
+<h1 class="mb-4"> Questions </h1>
+
+<%= link_to 'New question', new_question_path, class: 'btn btn-primary btn-lg' %>
 
 <% @questions.each do |q|  %>
-<h2><%= q.title%></h2>
+  <article class="card mt-3">
+    <div class="card-body">
+      <h4><%= q.title%></h4>
 
-<time datetime="<%= q.formatted_created_at%>">
-  <%= q.formatted_created_at %>
-</time>
+      <section class="card-text">
+        <time datetime="<%= q.formatted_created_at%>">
+          <small><%= q.formatted_created_at %></small>
+        </time>
 
-<p><%= q.body %><p>
+        <p class="my-2"><%= q.body %><p>
+      </section>
+
+      <%= link_to 'Show', question_path(q), class: 'btn btn-primary' %>
+      <%= link_to 'Edit', edit_question_path(q), class: 'btn btn-secondary' %>
+      <%= link_to 'Delete', question_path(q), class: 'btn btn-danger', 
+        data: {method: :delete, confirm: 'Are you shure?'} %>
+    </div>
+  </article>
 <% end %>
