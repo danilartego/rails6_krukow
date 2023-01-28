@@ -3,7 +3,8 @@ class QuestionsController < ApplicationController
 
   def show
     @answer = @question.answers.build
-    @answers = Answer.where(question_id: @question[:id]).reverse
+    # @answers = Answer.where(question_id: @question[:id]).reverse - это мое решение
+    @answers = @question.answers.order created_at: :desc # решение в уроке
   end
 
   def destroy
