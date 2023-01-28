@@ -1,4 +1,4 @@
-<h1 class="mb-4"> Questions </h1>
+<h1 class="mb-4"> Вопросы </h1>
 
 <%= link_to 'New question', new_question_path, class: 'btn btn-primary btn-lg' %>
 
@@ -6,7 +6,7 @@
   <article class="card mt-3">
     <div class="card-body">
       <h4><%= q.title%></h4>
-
+      
       <section class="card-text">
         <time datetime="<%= q.formatted_created_at%>">
           <small><%= q.formatted_created_at %></small>
