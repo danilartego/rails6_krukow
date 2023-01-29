@@ -4,7 +4,7 @@ class QuestionsController < ApplicationController
   def show
     @answer = @question.answers.build
     # @answers = Answer.where(question_id: @question[:id]).reverse - это мое решение
-    @answers = @question.answers.order created_at: :desc # решение в уроке
+    @answers = @question.answers.order(created_at: :desc).page(params[:page]).per(4) # решение в уроке
   end
 
   def destroy
@@ -26,7 +26,7 @@ class QuestionsController < ApplicationController
   end
 
   def index
-    @questions = Question.all
+    @questions = Question.order(created_at: :desc).page params[:page]
   end
 
   def new

@@ -6,6 +6,8 @@
 
 <%= link_to 'New question', new_question_path, class: 'btn btn-primary btn-lg' %>
 
+<%= paginate @questions %>
+
 <% @questions.each do |q|  %>
   <article class="card mt-3">
     <div class="card-body">
@@ -16,7 +18,9 @@
           <small><%= q.formatted_created_at %></small>
         </time>
 
-        <p class="my-2"><%= q.body %><p>
+        <p class="my-2">
+          <%= truncate strip_tags(q.body), length: 100, omission: ' ... (continued)' %> <%# strip_tags удаляем все теги %>
+        <p>
       </section>
 
       <%= link_to 'Show', question_path(q), class: 'btn btn-primary' %>
@@ -26,3 +30,5 @@
     </div>
   </article>
 <% end %>
+
+<%= paginate @questions %>
