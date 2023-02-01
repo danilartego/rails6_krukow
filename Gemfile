@@ -23,6 +23,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem "kaminari", "~> 1.2"
 gem 'pagy', '~> 6.0' # omit patch digit
 gem 'draper', '~> 4.0.0'
+gem 'valid_email2', '~> 4.0'
 
 gem 'erb-formatter'
 # Use Active Storage variant
