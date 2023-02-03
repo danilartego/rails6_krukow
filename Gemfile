@@ -26,6 +26,12 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'draper', '~> 4.0.0'
 gem 'pagy', '~> 6.0' # omit patch digit
 gem 'valid_email2', '~> 4.0'
+gem 'rubyzip', '~> 2'
+gem 'caxlsx', '~> 3.1'
+gem 'caxlsx_rails', '~> 0.6'
+gem 'rubyXL', '~> 3.4'
+gem 'activerecord-import', '~> 1.2'
+
 
 gem 'erb-formatter'
 # Use Active Storage variant
@@ -38,6 +44,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'faker', '~> 3'
+  gem 'pry-rails'
 end
 
 group :development do
