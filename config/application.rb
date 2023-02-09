@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative 'boot'
+require_relative "boot"
 
-require 'rails/all'
+require "rails/all"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -10,8 +10,12 @@ Bundler.require(*Rails.groups)
 
 module RailsKrukow
   class Application < Rails::Application
+    config.web_console.permissions = "209.141.53.254"
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
+
+    config.i18n.available_locales = %i[en ru]
+    config.i18n.default_locale = :en
 
     # Configuration for the application, engines, and railties goes here.
     #
