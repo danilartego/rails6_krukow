@@ -13,7 +13,7 @@ ru:
       title: Добро пожаловать в AskIt!
   questions:
     create:
-      success: Вопрос создан ууу
+      success: Вопрос создан
     index:
       new: Новый вопрос
       title: Вопросы
