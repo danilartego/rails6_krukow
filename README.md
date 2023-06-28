@@ -1,4 +1,4 @@
-# Уроки по Ruby on Rails 6
+# Уроки по Ruby on Rails 6 / lesson_15
 
 Приложение создано по урокам Ильи Круковского
 
@@ -56,7 +56,7 @@ rake assets:precompile
 ```
 yarn remove @rails/webpacker
 rm -rf ./node_modules
-yarn add @rails/webpacker@^5.2.1
+yarn add @rails/webpacker@^5.4.4
 rails webpacker:install
 ```
 ### Урок 2
